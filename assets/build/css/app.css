@@ -1,4 +1,118 @@
-/* google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&family=Archivo:wght@300;400;500;600&family=Cabin:wght@400;500;600;700&family=Fira+Code:wght@300;400&family=Inria+Sans:wght@300;400;700&family=Open+Sans:wght@300;400;600&family=Space+Mono&display=swap");
+/* idealist-sans-400 - latin */
+@font-face {
+  font-family: 'Idealist Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Idealist Sans"), url("../fonts/idealist-sans/idealist-sans.regular.woff") format("woff");
+}
+
+/* idealist-sans-300 - latin */
+@font-face {
+  font-family: 'Idealist Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Idealist Sans"), url("../fonts/idealist-sans/idealist-sans.light.woff") format("woff");
+}
+
+/* open-sans-300 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("../fonts/open-sans-v34-latin/open-sans-v34-latin-300.woff2") format("woff2"), url("../fonts/open-sans-v34-latin/open-sans-v34-latin-300.woff") format("woff");
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/open-sans-v34-latin/open-sans-v34-latin-regular.woff2") format("woff2"), url("../fonts/open-sans-v34-latin/open-sans-v34-latin-regular.woff") format("woff");
+}
+
+/* open-sans-500 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/open-sans-v34-latin/open-sans-v34-latin-500.woff2") format("woff2"), url("../fonts/open-sans-v34-latin/open-sans-v34-latin-500.woff") format("woff");
+}
+
+/* open-sans-600 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/open-sans-v34-latin/open-sans-v34-latin-600.woff2") format("woff2"), url("../fonts/open-sans-v34-latin/open-sans-v34-latin-600.woff") format("woff");
+}
+
+/* fira-code-300 - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("../fonts/fira-code-v21-latin-300.woff2") format("woff2"), url("../fonts/fira-code-v21-latin-300.woff") format("woff");
+}
+
+/* fira-code-regular - latin */
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/fira-code-v21-latin-regular.woff2") format("woff2"), url("../fonts/fira-code-v21-latin-regular.woff") format("woff");
+}
+
+/* space-mono-regular - latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/space-mono-v12-latin-regular.woff2") format("woff2"), url("../fonts/space-mono-v12-latin-regular.woff") format("woff");
+}
+
 /* tailwindcss styles */
-@tailwind base {}@tailwind components {}@tailwind utilities {}
+@tailwind base {}@tailwind components {}@tailwind utilities {}@layer base {
+  body {
+    @apply text-base-sm md:text-base text-gray-500 font-light {}    @apply tracking-[0.25px] md:tracking-[0.5px] {}
+  }
+  p:not(:first-child) {
+    @apply mt-[1.875rem] md:mt-12 {}
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply mt-[3.75rem] md:mt-24 mb-[1.875rem] md:mb-12 font-heading font-medium leading-[1.25] md:leading-[1.33] {}
+  }
+  h1 {
+    @apply text-h1 {}
+  }
+  h2 {
+    @apply text-h2 {}
+  }
+  h3 {
+    @apply text-h3 {}
+  }
+  h4 {
+    @apply text-h4 {}
+  }
+  h5 {
+    @apply text-h5 {}
+  }
+  h6 {
+    @apply text-h6 {}
+  }
+  a {
+    @apply inline-block transition-colors duration-500 {}
+  }
+}
+
+@layer components {}@layer utilities {
+  .text-button,
+  .text-overline {
+    @apply uppercase {}
+  }
+  .inner {
+    @apply max-w-[1980px] px-20 md:px-10 mx-auto {}
+  }
+  .inner--2xl {
+    @apply container-2xl mx-auto {}
+  }
+}
