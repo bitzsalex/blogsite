@@ -72,14 +72,17 @@
 
 /* tailwindcss styles */
 @tailwind base {}@tailwind components {}@tailwind utilities {}@layer base {
+  ::selection {
+    @apply text-slate-200 bg-gore-700 {}
+  }
   body {
-    @apply text-base-sm md:text-base text-gray-500 font-light {}    @apply tracking-[0.25px] md:tracking-[0.5px] {}
+    @apply text-base-sm md:text-base text-gray-600 {}
   }
   p:not(:first-child) {
     @apply mt-[1.875rem] md:mt-12 {}
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply mt-[3.75rem] md:mt-24 mb-[1.875rem] md:mb-12 font-heading font-medium leading-[1.25] md:leading-[1.33] {}
+    @apply font-heading font-bold leading-[1.25] md:leading-[1.33] mt-[3.75rem] md:mt-24 mb-[1.875rem] md:mb-12 {}    @apply text-martinique-800 {}
   }
   h1 {
     @apply text-h1 {}
@@ -100,7 +103,17 @@
     @apply text-h6 {}
   }
   a {
-    @apply inline-block transition-colors duration-500 {}
+    @apply inline-block relative transition-colors duration-500 border-b-[1px] border-pea-600 hover:after:scale-x-100 {}
+  }
+  a::before, a::after {
+    content: '';
+    @apply absolute w-full h-[2px] bottom-0 left-0 {}
+  }
+  a::before {
+    @apply bg-pea-600 h-10 z-[-1] bg-opacity-10 {}
+  }
+  a::after {
+    @apply bottom-[-1px] scale-x-0 origin-top-left bg-pea-900 transition-transform duration-500 {}
   }
 }
 
