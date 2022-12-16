@@ -96,7 +96,7 @@ module.exports = {
 				h6: ["1em", { letterSpacing: "0.15px" }],
 				subtitle: ["1.111em", { letterSpacing: "0.15px" }],
 				subtitleBold: ["1em", { letterSpacing: "0.1px", fontWeight: "600" }],
-				button: ["clamp(13px, 0.888em, 15px)", { letterSpacing: "1.25px", fontWeight: "600" }], // Uppercase
+				button: ["clamp(13px, 0.888em, 15px)", { letterSpacing: "1.25px", fontWeight: "700" }], // Uppercase
 				caption: ["0.833em", { letterSpacing: "0.75px" }],
 				overline: ["clamp(12px, 11.8873239437px + 0.4225352113vw, 14px)", { letterSpacing: "1.5px" }], // Uppercase
 				base: ["clamp(18px, 15.8873239437px + 0.4225352113vw, 24px)", { lineHeight: "1.725", letterSpacing: "0.5px" }],

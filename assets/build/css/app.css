@@ -117,7 +117,46 @@
   }
 }
 
-@layer components {}@layer utilities {
+@layer components {
+  .btn {
+    @apply inline-flex text-button items-center py-8 px-16 align-middle transition-all duration-500 shadow-sm hover:shadow-none {}
+  }
+  .btn--sm {
+    @apply py-4 px-8 text-[1.3rem] {}
+  }
+  .btn--disabled {
+    @apply opacity-60 bg-gray-300 text-gray-800 dark:bg-gray-300 dark:text-gray-400 dark:bg-opacity-20 pointer-events-none {}
+  }
+  .btn--pea {
+    @apply bg-pea-500 text-white hover:bg-martinique-900 border-pea-500 {}
+  }
+  .btn--pea.btn--text {
+    @apply text-pea-600 hover:bg-pea-100 hover:text-pea-600 dark:text-pea-700 dark:hover:bg-pea-900 {}
+  }
+  .btn--pea.btn--tonal {
+    @apply bg-pea-100 text-pea-800 hover:bg-pea-200 hover:text-pea-900 dark:bg-pea-900 dark:text-pea-400 {}
+  }
+  .btn--pea.btn--outlined {
+    @apply text-pea-800 hover:text-pea-400 hover:bg-transparent {}
+  }
+  .btn__icon {
+    @apply mr-8 {}
+  }
+  .btn--text {
+    @apply bg-transparent shadow-none dark:hover:bg-opacity-30 {}
+  }
+  .btn--tonal {
+    @apply dark:bg-opacity-20 dark:hover:bg-opacity-50 {}
+  }
+  .btn--outlined {
+    @apply bg-transparent border border-current {}
+  }
+  .btn--rounded {
+    @apply rounded-[5rem] {}
+  }
+}
+
+@layer utilities {
   .text-button,
   .text-overline {
     @apply uppercase {}

@@ -1,57 +1,57 @@
 /* idealist-sans-400 - latin */
 @font-face
-    font-family: 'Idealist Sans'
-    font-style: normal
-    font-weight: 400
-    src: local('Idealist Sans'), url('../fonts/idealist-sans/idealist-sans.regular.woff') format('woff')
+      font-family: 'Idealist Sans'
+      font-style: normal
+      font-weight: 400
+      src: local('Idealist Sans'), url('../fonts/idealist-sans/idealist-sans.regular.woff') format('woff')
 /* idealist-sans-300 - latin */
 @font-face
-    font-family: 'Idealist Sans'
-    font-style: normal
-    font-weight: 300
-    src: local('Idealist Sans'), url('../fonts/idealist-sans/idealist-sans.light.woff') format('woff')
+      font-family: 'Idealist Sans'
+      font-style: normal
+      font-weight: 300
+      src: local('Idealist Sans'), url('../fonts/idealist-sans/idealist-sans.light.woff') format('woff')
 /* open-sans-300 - latin */
 @font-face
-  font-family: 'Open Sans'
-  font-style: normal
-  font-weight: 300
-  src: local(''), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-300.woff2') format('woff2'), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-300.woff') format('woff')
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 300
+    src: local(''), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-300.woff2') format('woff2'), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-300.woff') format('woff')
 /* open-sans-regular - latin */
 @font-face
-  font-family: 'Open Sans'
-  font-style: normal
-  font-weight: 400
-  src: local(''), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-regular.woff2') format('woff2'), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-regular.woff') format('woff')
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 400
+    src: local(''), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-regular.woff2') format('woff2'), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-regular.woff') format('woff')
 /* open-sans-500 - latin */
 @font-face
-  font-family: 'Open Sans'
-  font-style: normal
-  font-weight: 500
-  src: local(''), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-500.woff2') format('woff2'), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-500.woff') format('woff')
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 500
+    src: local(''), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-500.woff2') format('woff2'), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-500.woff') format('woff')
 /* open-sans-600 - latin */
 @font-face
-  font-family: 'Open Sans'
-  font-style: normal
-  font-weight: 600
-  src: local(''), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-600.woff2') format('woff2'), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-600.woff') format('woff')
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 600
+    src: local(''), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-600.woff2') format('woff2'), url('../fonts/open-sans-v34-latin/open-sans-v34-latin-600.woff') format('woff')
 /* fira-code-300 - latin */
 @font-face
-  font-family: 'Fira Code'
-  font-style: normal
-  font-weight: 300
-  src: local(''), url('../fonts/fira-code-v21-latin-300.woff2') format('woff2'), url('../fonts/fira-code-v21-latin-300.woff') format('woff')
+    font-family: 'Fira Code'
+    font-style: normal
+    font-weight: 300
+    src: local(''), url('../fonts/fira-code-v21-latin-300.woff2') format('woff2'), url('../fonts/fira-code-v21-latin-300.woff') format('woff')
 /* fira-code-regular - latin */
 @font-face
-  font-family: 'Fira Code'
-  font-style: normal
-  font-weight: 400
-  src: local(''), url('../fonts/fira-code-v21-latin-regular.woff2') format('woff2'), url('../fonts/fira-code-v21-latin-regular.woff') format('woff')
+    font-family: 'Fira Code'
+    font-style: normal
+    font-weight: 400
+    src: local(''), url('../fonts/fira-code-v21-latin-regular.woff2') format('woff2'), url('../fonts/fira-code-v21-latin-regular.woff') format('woff')
 /* space-mono-regular - latin */
 @font-face
-  font-family: 'Space Mono'
-  font-style: normal
-  font-weight: 400
-  src: local(''), url('../fonts/space-mono-v12-latin-regular.woff2') format('woff2'), url('../fonts/space-mono-v12-latin-regular.woff') format('woff')
+    font-family: 'Space Mono'
+    font-style: normal
+    font-weight: 400
+    src: local(''), url('../fonts/space-mono-v12-latin-regular.woff2') format('woff2'), url('../fonts/space-mono-v12-latin-regular.woff') format('woff')
 
 /* tailwindcss styles */
 // tailwind
@@ -101,6 +101,31 @@
             @apply bottom-[-1px] scale-x-0 origin-top-left bg-pea-900 transition-transform duration-500
 
 @layer components
+    .btn
+        $name: &
+        @apply inline-flex text-button items-center py-8 px-16 align-middle transition-all duration-500 shadow-sm hover:shadow-none
+        &--sm
+            @apply py-4 px-8 text-[1.3rem]
+        &--disabled
+            @apply opacity-60 bg-gray-300 text-gray-800 dark:bg-gray-300 dark:text-gray-400 dark:bg-opacity-20 pointer-events-none
+        &--pea
+            @apply bg-pea-500 text-white hover:bg-martinique-900 border-pea-500
+            &#{$name}--text
+                @apply text-pea-600 hover:bg-pea-100 hover:text-pea-600 dark:text-pea-700 dark:hover:bg-pea-900
+            &#{$name}--tonal
+                @apply bg-pea-100 text-pea-800 hover:bg-pea-200 hover:text-pea-900 dark:bg-pea-900 dark:text-pea-400
+            &#{$name}--outlined
+                @apply text-pea-800 hover:text-pea-400 hover:bg-transparent
+        &__icon
+            @apply mr-8
+        &--text
+            @apply bg-transparent shadow-none dark:hover:bg-opacity-30
+        &--tonal
+            @apply dark:bg-opacity-20 dark:hover:bg-opacity-50
+        &--outlined
+            @apply bg-transparent border border-current
+        &--rounded
+            @apply rounded-[5rem]
 
 @layer utilities
     .text-button,
