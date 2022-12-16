@@ -555,6 +555,11 @@ a {
   align-items: flex-start;
   gap: 6rem;
 }
+.wrapper--left {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 0.325fr 1fr;
+    grid-template-rows: auto;
+  }
 .wrapper--right {
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 0.325fr;
@@ -564,10 +569,15 @@ a {
   padding-top: 13rem;
   padding-bottom: 13rem;
 }
+.section-padding--sm {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 .sticky-aside {
   position: sticky;
   top: 0px;
   height: 100vh;
+  overflow: auto;
 }
 .categories {
   display: flex;
@@ -646,6 +656,17 @@ a {
   flex-direction: column;
   gap: 3.5rem;
 }
+.article--full {
+  display: grid;
+  width: 100%;
+  gap: 0px;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr .65fr;
+    grid-template-rows: auto;
+}
 .article-wrapper {
   display: grid;
   -moz-column-gap: 2rem;
@@ -653,6 +674,25 @@ a {
   row-gap: 13rem;    grid-auto-columns: 1fr;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+}
+.article-wrapper--vertical {
+    grid-template-columns: 1fr;
+  }
+.article__details {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 8rem;
+}
+.article__banner {
+  display: flex;
+  align-items: stretch;
+}
+.article__banner .article__figure {
+  height: 100%;
+}
+.article__banner .article__figure > img {
+  height: 100%;
 }
 .article__header {
   display: flex;
@@ -829,10 +869,99 @@ a {
   content: var(--tw-content);
   display: none;
 }
+.series__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.series__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.series__banner {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.series__banner > img {
+  aspect-ratio: 16/10;
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.series__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-weight: 300;
+}
+.series__contributors {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.series__contributor {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.series__contributor:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.series__footer {
+  border-top-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity));
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+.series__share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.series__share a {
+  display: flex;
+  height: 6rem;
+  width: 6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: currentColor;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+.series__share a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
 .authors-credit {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.authors-credit--vertical {
+  flex-direction: column;
+  line-height: 1.1;
+}
+.authors-credit--vertical > li {
+  width: 100%;
 }
 .authors-credit > li {
   display: flex;
@@ -846,6 +975,10 @@ a {
   border-width: 4px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.authors-credit__avatar--lg {
+  height: 8rem;
+  width: 8rem;
 }
 .authors-credit__avatar--circle {
   border-radius: 9999px;
@@ -873,6 +1006,14 @@ a {
     margin-right: 0.5rem;
     display: inline-block
   }
+.authors-credit__names--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.authors-credit__names--vertical li:not(:last-child)::after {
+  content: var(--tw-content);
+  display: none;
+}
 .authors-credit__names a {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -960,6 +1101,10 @@ a {
 .text-h6 {
   font-size: 1em;
   letter-spacing: 0.15px;
+}
+.text-h4 {
+  font-size: 1.777em;
+  letter-spacing: 0.25px;
 }
 .uppercase {
   text-transform: uppercase;
