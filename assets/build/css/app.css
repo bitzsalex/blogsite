@@ -160,7 +160,7 @@
   .section-padding {
     @apply py-52 {}
   }
-  .section-padding--medium {
+  .section-padding--md {
     @apply py-32 {}
   }
   .section-padding--sm {
@@ -195,6 +195,9 @@
     grid-template-columns: 1fr .65fr;
     grid-template-rows: auto;
   }
+  .article--sm {
+    @apply w-full bg-gray-50 rounded-lg gap-6 hover:bg-gray-100 {}
+  }
   .article-wrapper {
     @apply grid gap-x-8 gap-y-52 {}    grid-auto-columns: 1fr;
     grid-template-columns: repeat(2, 1fr);
@@ -224,8 +227,11 @@
   .article__heading a {
     @apply border-none after:hidden before:hidden {}
   }
+  .article__heading--sm {
+    @apply text-overline {}
+  }
   .article__published {
-    @apply flex text-overline tracking-[0.75px] font-light {}
+    @apply flex text-caption uppercase tracking-[0.75px] font-light {}
   }
   .article__published li {
     @apply flex items-center {}
@@ -233,6 +239,9 @@
   .article__published li:not(:last-child)::after {
     content: "";
     @apply block w-[3.5px] h-[3.5px] bg-slate-300 mx-4 rounded-full {}
+  }
+  .article__published--sm {
+    @apply text-overline {}
   }
   .article__info {
     @apply flex flex-col gap-14 {}
@@ -246,6 +255,15 @@
   .article__figure > img {
     @apply block w-full h-auto aspect-[16/12] object-cover {}
   }
+  .article__figure--lg > img {
+    @apply aspect-[16/8] {}
+  }
+  .article__figure--sm {
+    @apply max-w-[100px] rounded-lg {}
+  }
+  .article__figure--sm > img {
+    @apply aspect-[1/1] {}
+  }
   .article__class {
     @apply flex items-center gap-6 text-[0.7833em] tracking-[0.75px] font-light {}
   }
@@ -255,11 +273,20 @@
   .article__category a {
     @apply block relative p-1 px-4 hover:text-slate-800 hover:bg-slate-200 rounded-[5rem] {}
   }
+  .article__category--lg {
+    @apply border-l-2 border-r-2 border-gray-100 mx-6 px-8 {}
+  }
   .article__excerpt {
     @apply font-light {}
   }
+  .article__tags {
+    @apply flex flex-col items-center justify-center gap-4 section-padding--md border-t-2 border-b-2 border-gray-50 {}
+  }
   .article__footer {
     @apply mt-6 flex justify-between items-center {}
+  }
+  .article__footer--lg {
+    @apply flex-col items-stretch mt-32 {}
   }
   .article__link {
     @apply capitalize font-bold tracking-tight inline-flex items-center gap-4 {}
@@ -273,11 +300,14 @@
   .article__series {
     @apply flex items-center gap-2 text-overline tracking-normal {}
   }
+  .article__series--lg {
+    @apply text-caption font-light {}
+  }
   .article__series span {
     @apply inline-flex items-center gap-2 text-pea-500 {}
   }
   .article__series a {
-    @apply before:hidden leading-[1.1] font-medium border-gray-300 capitalize {}
+    @apply before:hidden leading-[1.1] font-medium border-gray-300 normal-case {}
   }
   .series__wrapper {
     @apply flex flex-col gap-16 {}
@@ -303,11 +333,17 @@
   .series__footer {
     @apply border-t-2 border-gray-100 px-10 py-8 pt-12 {}
   }
-  .series__share {
-    @apply flex items-center gap-4 justify-center {}
+  .share-links {
+    @apply flex items-center gap-4 {}
   }
-  .series__share a {
-    @apply w-24 h-24 rounded-lg border-[1px] border-current flex items-center justify-center text-gray-400 hover:text-gray-600 {}
+  .share-links a {
+    @apply p-2 flex justify-center items-center text-gray-400 hover:text-gray-500 {}
+  }
+  .share-links--lg {
+    @apply justify-center {}
+  }
+  .share-links--lg a {
+    @apply w-20 h-20 rounded-lg border-[1px] border-current {}
   }
   .authors-credit {
     @apply flex items-center gap-2 {}
@@ -368,6 +404,31 @@
   .link::after {
     @apply bottom-[-2px] scale-x-0 origin-top-left bg-pea-900 transition-transform duration-500 {}
   }
+  .post-nav {
+    @apply grid grid-cols-2 {}
+  }
+  .post-nav__link {
+    @apply flex justify-between items-center text-overline font-bold px-20 py-8 hover:bg-gray-100 {}
+  }
+  .post-nav__link--prev {
+    @apply text-right {}
+  }
+  .page-nav {
+    @apply flex flex-col text-[0.733em] font-light {}
+  }
+  .page-nav a {
+    @apply hover:text-martinique-400 py-1 block {}
+  }
+  .page-nav__sub {
+    @apply ml-4 {}
+  }
+  .page-nav__sub a {
+    @apply grid items-start gap-2 {}    grid-auto-columns: 1fr;
+    grid-template-columns: 2rem 1fr;
+  }
+  .page-nav__sub a svg {
+    @apply align-middle w-8 mt-2 basis-8 {}
+  }
 }
 
 @layer utilities {
@@ -376,9 +437,12 @@
     @apply uppercase {}
   }
   .inner {
-    @apply max-w-[1920px] px-20 md:px-10 mx-auto {}
+    @apply w-full max-w-[1920px] px-10 md:px-20 mx-auto {}
   }
   .inner--2xl {
-    @apply container-2xl mx-auto {}
+    @apply w-full container-2xl mx-auto {}
+  }
+  .inner--sm {
+    @apply w-full max-w-[931px] mx-auto {}
   }
 }

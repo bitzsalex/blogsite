@@ -1,0 +1,112 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title This is a test website
+        link(rel="stylesheet", href="./assets/css/app.css")
+    body 
+        main
+            section
+                .inner
+                    .wrapper.wrapper--right
+                        article.article.section-padding
+                            header.article__header
+                                .inner--sm
+                                    .flex.justify-between
+                                        ul.article__published
+                                            li Dec 12, 2022 
+                                            li 4 min read
+                                        ul.share-links
+                                            li #[a(href="#") #[i(data-feather="link")]]
+                                            li #[a(href="#") #[i(data-feather="twitter")]]
+                                            li #[a(href="#") #[i(data-feather="facebook")]]
+                                            li #[a(href="#") #[i(data-feather="linkedin")]]
+                                h1.text-center Join the Awwwards Jury 2023
+                                div.article__class.justify-center 
+                                    ul.authors-credit
+                                        li
+                                            figure.authors-credit__avatar.authors-credit__avatar--circle
+                                                img(src="./assets/img/1.png", alt="", srcset="")
+                                        li
+                                            ul.authors-credit__names
+                                                li #[a.link(href="#") Bitzs Alex]
+                                    ul.article__category.article__category--lg
+                                        li #[a(href="#") Programming]
+                                        li #[a(href="#") HTML]
+                                    div.article__series.article__series--lg
+                                        span #[i(data-feather="layers")] Series: 
+                                        a.link(href="#") This is a Series
+
+                            .section-padding--sm
+                                figure.article__figure.article__figure--lg
+                                    img(src="./assets/img/space.jpg", alt="", srcset="")
+                                    
+                            div.inner--sm.article__excerpt
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+
+                                h2.text-h3 Lorem ipsum dolor sit amet
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+                                h3.text-h4 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+                                
+                            footer.article__footer.article__footer--lg
+                                .article__tags
+                                    h6.text-overline.m-0 tags
+                                    ul.tags
+                                        li #[a(href="#") Programming]
+                                        li #[a(href="#") Data Science]
+                                        li #[a(href="#") Technology]
+
+                                ul.post-nav.section-padding--md
+                                    li.post-nav__item
+                                        a.post-nav__link.post-nav__link--prev(href="#") 
+                                            i(data-feather="corner-down-left")
+                                            .flex.flex-col    
+                                                span.text-gore-700 Prev Article
+                                                span TailwindCSS: Fluid typography with CSS clamp
+                                    li.post-nav__item
+                                        a.post-nav__link.post-nav__link--next(href="#") 
+                                            .flex.flex-col    
+                                                span.text-gore-700 Next Article
+                                                span TailwindCSS: Fluid typography with CSS clamp
+                                            i(data-feather="corner-down-right")
+
+                        aside.sticky-aside.sticky-aside--right.section-padding
+                            .flex.flex-col.gap-20
+                                div.flex.flex-col.gap-6
+                                    h3.text-h6.m-0 On this page
+                                    ul.page-nav
+                                        li #[a(href="#") Programming is a link]
+                                            ul.page-nav__sub
+                                                li #[a(href="#") #[i(data-feather="chevron-right")] Internal link is an internal]
+                                                li #[a(href="#") #[i(data-feather="chevron-right")] Internal link]
+                                        li #[a(href="#") Data Science]
+                                        li #[a(href="#") Technology]
+                                            ul.page-nav__sub
+                                                li #[a(href="#") #[i(data-feather="chevron-right")] Internal link]
+                                                li #[a(href="#") #[i(data-feather="chevron-right")] Internal link]
+                                        li #[a(href="#") Self Improvement]
+                                        li #[a(href="#") Machine Learning]
+                                
+                                div.flex.flex-col.gap-6
+                                    h3.text-h6.m-0 #[a(href="#") On this series]
+                                    .flex.flex-col.gap-4
+                                        a.article--sm.flex.items-center(href="#")
+                                            figure.article__figure.article__figure--sm
+                                                img(src="./assets/img/1.png", alt="", srcset="")
+                                            h3.article__heading.article__heading--sm
+                                                span.block.font-light part One
+                                                span.text-gore-700 This is the title of blog post another blog and it extends
+
+                                        a.article--sm.flex.items-center(href="#")
+                                            figure.article__figure.article__figure--sm
+                                                img(src="./assets/img/1.png", alt="", srcset="")
+                                            h3.article__heading.article__heading--sm
+                                                span.block.font-light part One
+                                                span.text-gore-700 This is the title of blog post another blog and it extends
+
+
+        script(src="./assets/js/app.js")

@@ -131,7 +131,7 @@
 
     .section-padding
         @apply py-52
-        &--medium
+        &--md
             @apply py-32
         &--sm
             @apply py-20
@@ -162,6 +162,8 @@
             grid-auto-columns: 1fr
             grid-template-columns: 1fr .65fr
             grid-template-rows: auto
+        &--sm
+            @apply w-full bg-gray-50 rounded-lg gap-6 hover:bg-gray-100
 
         &-wrapper
             @apply grid gap-x-8 gap-y-52
@@ -189,14 +191,18 @@
             @apply m-0 text-h4
             & a
                 @apply border-none after:hidden before:hidden
+            &--sm
+                @apply text-overline
 
         &__published
-            @apply flex text-overline tracking-[0.75px] font-light
+            @apply flex text-caption uppercase tracking-[0.75px] font-light
             & li
                 @apply flex items-center
                 &:not(:last-child)::after
                     content: ""
                     @apply block w-[3.5px] h-[3.5px] bg-slate-300 mx-4 rounded-full
+            &--sm
+                @apply text-overline
 
         &__info
             @apply flex flex-col gap-14
@@ -207,6 +213,13 @@
             @apply w-full relative block overflow-hidden rounded-2xl
             & > img
                 @apply block w-full h-auto aspect-[16/12] object-cover
+            &--lg
+                & > img
+                    @apply aspect-[16/8]
+            &--sm
+                @apply max-w-[100px] rounded-lg
+                & > img
+                    @apply aspect-[1/1]
 
         &__class
             @apply flex items-center gap-6 text-[0.7833em] tracking-[0.75px] font-light
@@ -217,12 +230,18 @@
             a
                 @apply block relative p-1 px-4 hover:text-slate-800 hover:bg-slate-200 rounded-[5rem] 
                 // dark:hover:text-blue-violet-300 dark:hover:bg-blue-violet-900 dark:hover:bg-opacity-50
+            &--lg
+                @apply border-l-2 border-r-2 border-gray-100 mx-6 px-8
 
         &__excerpt
             @apply font-light
+        &__tags
+            @apply flex flex-col items-center justify-center gap-4 section-padding--md border-t-2 border-b-2 border-gray-50
 
         &__footer
             @apply mt-6 flex justify-between items-center
+            &--lg
+                @apply flex-col items-stretch mt-32
         &__link
             @apply capitalize font-bold tracking-tight inline-flex items-center gap-4
             & > span
@@ -232,11 +251,13 @@
                     @apply after:scale-x-100
         &__series
             @apply flex items-center gap-2 text-overline tracking-normal
+            &--lg
+                @apply text-caption font-light
         &__series span
             @apply inline-flex items-center gap-2 text-pea-500
         &__series a
             // @apply text-current dark:text-current hover:opacity-60 transition-opacity duration-500
-            @apply before:hidden leading-[1.1] font-medium border-gray-300 capitalize
+            @apply before:hidden leading-[1.1] font-medium border-gray-300 normal-case
     
     .series
         &__wrapper
@@ -255,10 +276,15 @@
             @apply w-full items-center flex gap-6 py-4 px-8 rounded-lg hover:bg-gray-100
         &__footer
             @apply border-t-2 border-gray-100 px-10 py-8 pt-12
-        &__share
-            @apply flex items-center gap-4 justify-center
+
+    .share-links
+        @apply flex items-center gap-4
+        & a 
+            @apply p-2 flex justify-center items-center text-gray-400 hover:text-gray-500
+        &--lg
+            @apply justify-center
             & a
-                @apply w-24 h-24 rounded-lg border-[1px] border-current flex items-center justify-center text-gray-400 hover:text-gray-600
+                @apply w-20 h-20 rounded-lg border-[1px] border-current
         
     .authors-credit
         @apply flex items-center gap-2
@@ -307,6 +333,25 @@
         &::after
             @apply bottom-[-2px] scale-x-0 origin-top-left bg-pea-900 transition-transform duration-500
 
+    .post-nav
+        @apply grid grid-cols-2
+        &__link
+            @apply flex justify-between items-center text-overline font-bold px-20 py-8 hover:bg-gray-100
+            &--prev
+                @apply text-right
+    .page-nav
+        @apply flex flex-col text-[0.733em] font-light
+        a
+            @apply hover:text-martinique-400 py-1 block
+        &__sub
+            @apply ml-4
+            a
+                @apply grid items-start gap-2
+                grid-auto-columns: 1fr
+                grid-template-columns: 2rem 1fr
+                svg
+                    @apply align-middle w-8 mt-2 basis-8
+
 @layer utilities
     .text-button,
     .text-overline
@@ -314,6 +359,8 @@
     
     // inner container
     .inner
-        @apply max-w-[1920px] px-20 md:px-10 mx-auto
+        @apply w-full max-w-[1920px] px-10 md:px-20 mx-auto
         &--2xl
-            @apply container-2xl mx-auto
+            @apply w-full container-2xl mx-auto
+        &--sm
+            @apply w-full max-w-[931px] mx-auto
