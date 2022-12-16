@@ -4258,10 +4258,12 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
   module_default.start();
   feather.replace();
   var themeToggler = document.querySelector("button.theme__toggler");
-  themeToggler.addEventListener("click", () => {
-    currentTheme = localStorage.getItem("theme");
-    themeSwitch(currentTheme == "dark" ? "light" : "dark");
-  });
+  if (themeToggler) {
+    themeToggler.addEventListener("click", () => {
+      currentTheme = localStorage.getItem("theme");
+      themeSwitch(currentTheme == "dark" ? "light" : "dark");
+    });
+  }
   var userTheme = localStorage.getItem("theme");
   var systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
   var themeCheck = () => {

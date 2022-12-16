@@ -8,25 +8,105 @@ html(lang="en")
         link(rel="stylesheet", href="./assets/css/app.css")
     body 
         main
-            section 
+            section.section-padding.bg-gore-50.bg-opacity-40
                 .inner
-                    h1 This is something I enjoy
-                    h2 this is heading two
-                    h3 this is heading three
-                    h4 Heading 4
-                    h5 Heading 5
-                    h6 Heading 6 
+                    .flex.items-center.gap-20
+                        h1.text-h1.flex-1.m-0  Plot Space
+                        div(class="w-1/2 text-subtitle")
+                            p The discoveries, experiences, study notes, and resources I came across in my journey put together in words.
 
-                    p Lorem ipsum dolor sit amet consectetur #[a(href="") adipisicing elit]. Fugiat, nobis quia rem assumenda porro tempore. Magnam doloribus deserunt optio, illum aspernatur molestiae dolore exercitationem delectus voluptatum voluptas maxime, rerum repudiandae.
+            section
+                .inner
+                    .wrapper.wrapper--right
+                        div.article-wrapper.section-padding
+                            article.article.article--full
+                                header.article__header
+                                    ul.article__published
+                                        li Dec 12, 2022
+                                        li 4 min read
+                                    h3.article__heading #[a(href="") Join the Awwwards Jury 2023]
+                                div.article__info
+                                    a(href="") 
+                                        figure.article__figure
+                                            img(src="./assets/img/space.jpg", alt="", srcset="")
+                                    div.article__class
+                                        strong by
+                                        ul.authors-credit
+                                            li
+                                                figure.authors-credit__avatar.authors-credit__avatar--circle
+                                                    img(src="./assets/img/1.png", alt="", srcset="")
+                                            li
+                                                ul.authors-credit__names
+                                                    li #[a.link(href="#") Bitzs Alex]
+                                        strong in
+                                        ul(class="article__category")
+                                            li #[a(href="#") Programming]
+                                            
+                                    div.article__excerpt
+                                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officiis expedita soluta sed quam sunt voluptatum explicabo obcaecati ut quisquam?
+                                    
+                                footer.article__footer
+                                    div
+                                        a.article__link(href="") #[span Read article] #[i(data-feather="arrow-up-right")]
 
-                    div
-                        button(type="submit" class="btn btn--sm") Click Me
-                        button(type="submit" class="btn btn--sm btn--disabled") Click Me
-                        button(type="submit" class="btn btn--sm btn--outlined btn--rounded") Click Me
-                        button(type="submit" class="btn btn--sm btn--pea") Click Me
-                        button(type="submit" class="btn btn--sm btn--pea btn--outlined") Click Me
-                        button(type="submit" class="btn btn--sm btn--pea btn--tonal") Click Me
-                        button(type="submit" class="btn btn--sm btn--pea btn--text") Click Me
-                        button(type="submit" class="btn btn--sm btn--pea btn--text btn--rounded") Click Me
-                        button(type="submit" class="btn btn--sm btn--pea btn--tonal btn--rounded") Click Me
-                        button(type="submit" class="btn btn--sm btn--pea btn--outlined btn--rounded") Click Me
+                            each _, i in Array(10)
+                                article.article
+                                    header.article__header
+                                        ul.article__published
+                                            li Dec 12, 2022
+                                            li 4 min read
+
+                                        h3.article__heading #[a(href="") Join the Awwwards Jury 2023]
+                                    div.article__info
+                                        a(href="") 
+                                            figure.article__figure
+                                                img(src="./assets/img/banner_image.png", alt="", srcset="")
+
+                                        div.article__class
+                                            strong by
+                                            ul.authors-credit
+                                                li
+                                                    figure.authors-credit__avatar.authors-credit__avatar--circle
+                                                        img(src="./assets/img/1.png", alt="", srcset="")
+                                                    figure.authors-credit__avatar.authors-credit__avatar--circle
+                                                        img(src="./assets/img/2.png", alt="", srcset="")
+                                                li
+                                                    ul.authors-credit__names
+                                                        li #[a.link(href="#") Bitzs Alex]
+                                                        li #[a.link(href="#") Bitzs Alex]
+                                            strong in
+                                            ul(class="article__category")
+                                                li #[a(href="#") Programming]
+                                                    li #[a(href="#") Data Science]
+
+                                        div.article__excerpt
+                                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officiis expedita soluta sed quam sunt voluptatum explicabo obcaecati ut quisquam?
+                                    footer.article__footer
+                                        a.article__link(href="") #[span Read article] #[i(data-feather="arrow-up-right")]
+                                        div.article__series
+                                            span #[i(data-feather="layers")] Series: 
+                                            a.link(href="#") Something
+
+                        aside.sticky-aside.section-padding
+                            .flex.flex-col.gap-20
+                                div.flex.flex-col.gap-6
+                                    h3.text-h6.uppercase.m-0 Discover More
+                                    ul.categories
+                                        li #[a(href="#") Programming]
+                                        li #[a(href="#") Data Science]
+                                        li #[a(href="#") Technology]
+                                        li #[a(href="#") Self Improvement]
+                                        li #[a(href="#") Machine Learning]
+                                        li #[a(href="#") Productivity]
+
+                                div.flex.flex-col.gap-6
+                                    h3.text-h6.uppercase.m-0 Popular Tags
+                                    ul.tags
+                                        li #[a(href="#") Programming]
+                                        li #[a(href="#") Data Science]
+                                        li #[a(href="#") Technology]
+                                        li #[a(href="#") Self Improvement]
+                                        li #[a(href="#") Machine Learning]
+                                        li #[a(href="#") Productivity]
+
+        script(src="./assets/js/app.js")

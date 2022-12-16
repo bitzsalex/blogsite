@@ -9,11 +9,13 @@ feather.replace()
 // getting the toggler button
 const themeToggler = document.querySelector("button.theme__toggler")
 
-// on click
-themeToggler.addEventListener('click', () => {
-    currentTheme = localStorage.getItem("theme")
-    themeSwitch(currentTheme == "dark" ? "light" : "dark")
-})
+if (themeToggler) {
+    // on click
+    themeToggler.addEventListener('click', () => {
+        currentTheme = localStorage.getItem("theme")
+        themeSwitch(currentTheme == "dark" ? "light" : "dark")
+    })
+}
 
 // theme vars
 const userTheme = localStorage.getItem("theme")
