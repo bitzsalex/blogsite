@@ -109,4 +109,37 @@ html(lang="en")
                                         li #[a(href="#") Machine Learning]
                                         li #[a(href="#") Productivity]
 
+        footer#page-footer.section-padding.footer
+            .inner
+                .footer__newsletter
+                    h4.m-0 Subscribe to my newsletter to get latest updates and posts
+                    form.footer__form(action="", method="post")
+                        .flex.items-center.gap-10
+                            input.input.flex-1(type="email" name="email" placeholder="Your Email")
+                            button.btn.btn--pea(type="submit") Subscribe
+                div.text-overline
+                    p.text-center
+                        | &copy; 2022 All Rights Reserved!
+                        span.block Built with #[a.link(href="https://gohugo.io" target="_blank") Hugo]
+                        span.block Hosted on #[a.link(href="https://www.hostinger.com" target="_blank") Hostinger]
+                div.footer__social-links
+                    .inner--sm
+                        ul.social-links
+                            li
+                                a.social-links__link(href="" target="_blank")
+                                    i(data-feather="twitter") 
+                            li
+                                a.social-links__link(href="" target="_blank")
+                                    i(data-feather="github") 
+                            li
+                                a.social-links__link(href="" target="_blank")
+                                    i(data-feather="instagram") 
+                            li
+                                a.social-links__link(href="" target="_blank")
+                                    i(data-feather="facebook") 
+                            li
+                                a.social-links__link(href="" target="_blank")
+                                    i(data-feather="linkedin")
+
+
         script(src="./assets/js/app.js")

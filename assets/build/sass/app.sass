@@ -115,6 +115,11 @@
             @apply bg-transparent border border-current
         &--rounded
             @apply rounded-[5rem]
+    .input
+        @apply inline-block px-8 py-[1.5725rem] transition-all duration-500 outline-none focus:ring-2 ring-gore-500 text-caption font-light
+
+        &--disabled
+            @apply btn--disabled
 
     .wrapper
         @apply grid gap-24 w-full items-start
@@ -351,6 +356,21 @@
                 grid-template-columns: 2rem 1fr
                 svg
                     @apply align-middle w-8 mt-2 basis-8
+    .social-links
+        @apply flex flex-wrap items-center justify-center gap-8
+        &__link
+            @apply flex items-center justify-center p-8
+
+    .footer
+        @apply border-t-2 border-gray-100 mt-80 pt-0
+        &__newsletter
+            @apply bg-gore-50 p-48 relative -translate-y-1/2 grid items-center gap-20
+            grid-template-columns: 1fr .68fr
+        &__social-links
+            @apply mt-24 pt-20 relative before:contents before:absolute flex items-center justify-center
+            &::before
+                content: ''
+                @apply absolute border-t-[1px] border-pea-200 inline-block top-0 -translate-y-1/2 -translate-x-1/2 left-1/2 w-96
 
 @layer utilities
     .text-button,
