@@ -105,6 +105,9 @@
   a {
     @apply inline-block relative transition-colors duration-500 {}
   }
+  blockquote {
+    @apply mt-[1.875rem] md:mt-12 font-heading font-light italic py-10 pl-10 border-l-2 {}
+  }
 }
 
 @layer components {
@@ -204,6 +207,9 @@
   .article--sm {
     @apply w-full bg-gray-50 rounded-lg gap-6 hover:bg-gray-100 {}
   }
+  .article--sm.active {
+    @apply border hover:bg-gray-50 {}
+  }
   .article-wrapper {
     @apply grid gap-x-8 gap-y-52 {}    grid-auto-columns: 1fr;
     grid-template-columns: repeat(2, 1fr);
@@ -234,7 +240,7 @@
     @apply border-none after:hidden before:hidden {}
   }
   .article__heading--sm {
-    @apply text-overline {}
+    @apply text-overline p-8 flex flex-col justify-center {}
   }
   .article__published {
     @apply flex text-caption uppercase tracking-[0.75px] font-light {}
@@ -265,10 +271,10 @@
     @apply aspect-[16/8] {}
   }
   .article__figure--sm {
-    @apply max-w-[100px] rounded-lg {}
+    @apply max-w-[110px] rounded-lg {}
   }
   .article__figure--sm > img {
-    @apply aspect-[1/1] {}
+    @apply aspect-[1/1] h-full {}
   }
   .article__class {
     @apply flex items-center gap-6 text-[0.7833em] tracking-[0.75px] font-light {}

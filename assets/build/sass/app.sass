@@ -62,17 +62,13 @@
 @layer base
     ::selection
         @apply text-slate-200 bg-gore-700
-
     body
         @apply text-base-sm md:text-base text-gray-600
-
     p:not(:first-child)
         @apply mt-[1.875rem] md:mt-12
-
     h1, h2, h3, h4, h5, h6
         @apply font-heading font-bold leading-[1.25] md:leading-[1.33] mt-[3.75rem] md:mt-24 mb-[1.875rem] md:mb-12 
         @apply text-martinique-800
-
     h1
          @apply text-h1
     h2
@@ -85,9 +81,10 @@
          @apply text-h5
     h6
          @apply text-h6
-
     a
         @apply inline-block relative transition-colors duration-500
+    blockquote
+        @apply mt-[1.875rem] md:mt-12 font-heading font-light italic py-10 pl-10 border-l-2
 
 @layer components
     .btn
@@ -169,6 +166,8 @@
             grid-template-rows: auto
         &--sm
             @apply w-full bg-gray-50 rounded-lg gap-6 hover:bg-gray-100
+            &.active
+                @apply border hover:bg-gray-50
 
         &-wrapper
             @apply grid gap-x-8 gap-y-52
@@ -197,7 +196,7 @@
             & a
                 @apply border-none after:hidden before:hidden
             &--sm
-                @apply text-overline
+                @apply text-overline p-8 flex flex-col justify-center
 
         &__published
             @apply flex text-caption uppercase tracking-[0.75px] font-light
@@ -222,9 +221,9 @@
                 & > img
                     @apply aspect-[16/8]
             &--sm
-                @apply max-w-[100px] rounded-lg
+                @apply max-w-[110px] rounded-lg
                 & > img
-                    @apply aspect-[1/1]
+                    @apply aspect-[1/1] h-full
 
         &__class
             @apply flex items-center gap-6 text-[0.7833em] tracking-[0.75px] font-light
