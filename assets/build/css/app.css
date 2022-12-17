@@ -441,6 +441,19 @@
   .social-links__link {
     @apply flex items-center justify-center p-8 {}
   }
+  .listicon {
+    @apply flex flex-col gap-4 ml-4 {}
+  }
+  .listicon li {
+    @apply flex items-start relative gap-6 {}
+  }
+  .listicon li::before {
+    content: '';
+    @apply absolute top-3 w-12 h-12 rounded-full bg-gore-600 bg-opacity-10 {}
+  }
+  .listicon__icon {
+    @apply w-8 h-8 text-gore-600 relative mt-5 ml-2 {}
+  }
   .footer {
     @apply border-t-2 border-gray-100 mt-80 pt-0 {}
   }

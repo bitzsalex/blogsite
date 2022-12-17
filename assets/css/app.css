@@ -1305,6 +1305,37 @@ a {
   justify-content: center;
   padding: 2rem;
 }
+.listicon {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.listicon li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.listicon li::before {
+    content: '';
+    position: absolute;
+    top: 0.75rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 9999px;
+    background-color: rgb(130 94 205 / var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.1
+  }
+.listicon__icon {
+  position: relative;
+  margin-top: 1.25rem;
+  margin-left: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(130 94 205 / var(--tw-text-opacity));
+}
 .footer {
   margin-top: 20rem;
   border-top-width: 2px;
