@@ -120,16 +120,13 @@
 
     .wrapper
         @apply grid gap-24 w-full items-start
-
+        grid-auto-columns: 1fr
+        grid-template-rows: auto
         &--left
-            grid-auto-columns: 1fr
-            grid-template-columns: 0.325fr 1fr
-            grid-template-rows: auto
+            grid-template-columns: 0.35fr 1fr
 
         &--right
-            grid-auto-columns: 1fr
-            grid-template-columns: 1fr 0.325fr
-            grid-template-rows: auto
+            grid-template-columns: 1fr 0.35fr
 
     .section-padding
         @apply py-52
@@ -165,9 +162,9 @@
             grid-template-columns: 1fr .65fr
             grid-template-rows: auto
         &--sm
-            @apply w-full bg-gray-50 rounded-lg gap-6 hover:bg-gray-100
+            @apply w-full rounded-lg gap-6 hover:bg-gray-100
             &.active
-                @apply border hover:bg-gray-50
+                @apply border bg-gray-50 hover:bg-gray-50
 
         &-wrapper
             @apply grid gap-x-8 gap-y-52
@@ -176,6 +173,7 @@
             grid-template-rows: auto
 
             &--vertical
+                @apply gap-y-24
                 grid-template-columns: 1fr
 
         &__details
@@ -226,8 +224,9 @@
                     @apply aspect-[1/1] h-full
 
         &__class
-            @apply flex items-center gap-6 text-[0.7833em] tracking-[0.75px] font-light
-
+            @apply flex flex-col items-start gap-2 text-[0.7833em] tracking-[0.75px] font-light
+            &--lg
+                @apply flex-row items-center justify-center
         &__category 
             @apply flex items-center
             // dark:bg-blue-violet-900 dark:text-blue-violet-400
@@ -265,30 +264,27 @@
     
     .series
         &__wrapper
-            @apply flex flex-col gap-16
-        &__header
-            @apply flex flex-col gap-16
-        &__banner
-            @apply w-full rounded-2xl overflow-hidden
-            & > img
-                @apply w-full h-auto aspect-[16/10] object-cover object-center
+            @apply flex flex-col gap-12 relative px-8 pt-32
         &__info
-            @apply flex flex-col gap-12 font-light
+            @apply flex flex-col gap-12 text-caption font-light
         &__contributors
             @apply flex flex-col gap-6 mt-8
         &__contributor
-            @apply w-full items-center flex gap-6 py-4 px-8 rounded-lg hover:bg-gray-100
-        &__footer
-            @apply border-t-2 border-gray-100 px-10 py-8 pt-12
+            @apply w-full items-center flex gap-6 py-3 px-6 rounded-lg hover:bg-gray-100
+        &__share
+            @apply border-t border-gray-100 px-10 pt-12
 
     .share-links
         @apply flex items-center gap-4
         & a 
             @apply p-2 flex justify-center items-center text-gray-400 hover:text-gray-500
         &--lg
-            @apply justify-center
             & a
                 @apply w-20 h-20 rounded-lg border-[1px] border-current
+        &--footer
+            @apply justify-center gap-8
+            & a
+                @apply flex items-center justify-center p-8
         
     .authors-credit
         @apply flex items-center gap-2
@@ -301,7 +297,7 @@
         &__avatar
             @apply w-20 h-20 border-4 border-white overflow-hidden rounded-2xl
             &--lg
-                @apply w-32 h-32
+                @apply w-24 h-24
             &--circle
                 @apply rounded-full
             &:not(:first-of-type)
@@ -344,9 +340,9 @@
             &--prev
                 @apply text-right
     .page-nav
-        @apply flex flex-col text-[0.733em] font-light
+        @apply flex flex-col text-[0.733em] tracking-normal
         a
-            @apply hover:text-martinique-400 py-1 block
+            @apply hover:text-martinique-300 py-1 block
         &__sub
             @apply ml-4
             a
@@ -355,10 +351,6 @@
                 grid-template-columns: 2rem 1fr
                 svg
                     @apply align-middle w-8 mt-2 basis-8
-    .social-links
-        @apply flex flex-wrap items-center justify-center gap-8
-        &__link
-            @apply flex items-center justify-center p-8
     .listicon
         @apply flex flex-col gap-4 ml-4
         & li

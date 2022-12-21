@@ -19,43 +19,12 @@ html(lang="en")
                 .inner
                     .wrapper.wrapper--right
                         div.article-wrapper.section-padding
-                            article.article
-                                header.article__header
-                                    ul.article__published.article__published--sm
-                                        li Dec 12, 2022 
-                                        li 4 min read
-                                    h3.article__heading #[a(href="") Join the Awwwards Jury 2023]
-                                div.article__info
-                                    a(href="") 
-                                        figure.article__figure
-                                            img(src="./assets/img/space.jpg", alt="", srcset="")
-                                    div.article__class
-                                        strong by
-                                        ul.authors-credit
-                                            li
-                                                figure.authors-credit__avatar.authors-credit__avatar--circle
-                                                    img(src="./assets/img/1.png", alt="", srcset="")
-                                            li
-                                                ul.authors-credit__names
-                                                    li #[a.link(href="#") Bitzs Alex]
-                                        strong in
-                                        ul(class="article__category")
-                                            li #[a(href="#") Programming]
-                                            
-                                    div.article__excerpt
-                                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officiis expedita soluta sed quam sunt voluptatum explicabo obcaecati ut quisquam?
-                                    
-                                footer.article__footer
-                                    div
-                                        a.article__link(href="") #[span Read article] #[i(data-feather="arrow-up-right")]
-
                             each _, i in Array(10)
                                 article.article
                                     header.article__header
                                         ul.article__published.article__published--sm
                                             li Dec 12, 2022
                                             li 4 min read
-
                                         h3.article__heading #[a(href="") Join the Awwwards Jury 2023]
                                     div.article__info
                                         a(href="") 
@@ -63,29 +32,32 @@ html(lang="en")
                                                 img(src="./assets/img/banner_image.png", alt="", srcset="")
 
                                         div.article__class
-                                            strong by
-                                            ul.authors-credit
-                                                li
-                                                    figure.authors-credit__avatar.authors-credit__avatar--circle
-                                                        img(src="./assets/img/1.png", alt="", srcset="")
-                                                    figure.authors-credit__avatar.authors-credit__avatar--circle
-                                                        img(src="./assets/img/2.png", alt="", srcset="")
-                                                li
-                                                    ul.authors-credit__names
-                                                        li #[a.link(href="#") Bitzs Alex]
-                                                        li #[a.link(href="#") Bitzs Alex]
-                                            strong in
-                                            ul(class="article__category")
-                                                li #[a(href="#") Programming]
-                                                    li #[a(href="#") Data Science]
+                                            .flex.items-center.gap-6
+                                                strong.uppercase by
+                                                ul.authors-credit
+                                                    li
+                                                        figure.authors-credit__avatar.authors-credit__avatar--circle
+                                                            img(src="./assets/img/1.png", alt="", srcset="")
+                                                        figure.authors-credit__avatar.authors-credit__avatar--circle
+                                                            img(src="./assets/img/2.png", alt="", srcset="")
+                                                    li
+                                                        ul.authors-credit__names
+                                                            li #[a.link(href="#") Bitzs Alex]
+                                                            li #[a.link(href="#") Bitzs Alex]
+                                            .flex.items-center.gap-6
+                                                strong.uppercase in
+                                                ul(class="article__category")
+                                                    li #[a(href="#") Programming]
+                                                        li #[a(href="#") Data Science]
 
                                         div.article__excerpt
                                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officiis expedita soluta sed quam sunt voluptatum explicabo obcaecati ut quisquam?
                                     footer.article__footer
                                         a.article__link(href="") #[span Read article] #[i(data-feather="arrow-up-right")]
-                                        div.article__series
-                                            span #[i(data-feather="layers")] Series: 
-                                            a.link(href="#") Something
+                                        if i % 3 == 0
+                                            div.article__series
+                                                span #[i(data-feather="layers")] Series: 
+                                                a.link(href="#") Something
 
                         aside.sticky-aside.section-padding
                             .flex.flex-col.gap-20
@@ -124,21 +96,21 @@ html(lang="en")
                         span.block Hosted on #[a.link(href="https://www.hostinger.com" target="_blank") Hostinger]
                 div.footer__social-links
                     .inner--sm
-                        ul.social-links
+                        ul.share-links.share-links--footer
                             li
-                                a.social-links__link(href="" target="_blank")
+                                a(href="" target="_blank")
                                     i(data-feather="twitter") 
                             li
-                                a.social-links__link(href="" target="_blank")
+                                a(href="" target="_blank")
                                     i(data-feather="github") 
                             li
-                                a.social-links__link(href="" target="_blank")
+                                a(href="" target="_blank")
                                     i(data-feather="instagram") 
                             li
-                                a.social-links__link(href="" target="_blank")
+                                a(href="" target="_blank")
                                     i(data-feather="facebook") 
                             li
-                                a.social-links__link(href="" target="_blank")
+                                a(href="" target="_blank")
                                     i(data-feather="linkedin")
 
 

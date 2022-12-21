@@ -13,12 +13,10 @@ html(lang="en")
                     .wrapper.wrapper--left
                         aside.sticky-aside.section-padding--sm.pr-12
                             .series__wrapper
-                                header.series__header
-                                    figure.series__banner
-                                        img(src="./assets/img/space.jpg", alt="", srcset="")
-                                    h2.text-h4.m-0 Web Development Intro
                                 .series__info
-                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque in nisi impedit sequi reiciendis, accusantium quidem quam maxime placeat officia cum?
+                                    .flex.flex-col.gap-6
+                                        h2.series__title.text-h4.m-0 Web Dev Course
+                                        div Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque in nisi impedit sequi reiciendis, accusantium quidem quam maxime placeat officia?
                                     div.series__contributors
                                         h4.text-h6.m-0 Contributors
 
@@ -28,22 +26,21 @@ html(lang="en")
                                                     figure.authors-credit__avatar.authors-credit__avatar--lg.authors-credit__avatar--circle
                                                         img(src="./assets/img/1.png", alt="", srcset="")
                                                     ul.authors-credit__names.authors-credit__names--vertical
-                                                        li #[strong Bitzs Alex]
+                                                        li.font-heading #[strong Bitzs Alex]
                                                         li #[small Main Author]
                                             li
                                                 a.series__contributor(href="")
                                                     figure.authors-credit__avatar.authors-credit__avatar--lg.authors-credit__avatar--circle
                                                         img(src="./assets/img/1.png", alt="", srcset="")
                                                     ul.authors-credit__names.authors-credit__names--vertical
-                                                        li #[strong Bitzs Alex]
+                                                        li.font-heading #[strong Bitzs Alex]
                                                         li #[small Main Author]
 
-                                footer.series__footer
-                                    ul.share-links.share-links--lg
-                                        li #[a(href="#") #[i(data-feather="link")]]
-                                        li #[a(href="#") #[i(data-feather="twitter")]]
-                                        li #[a(href="#") #[i(data-feather="facebook")]]
-                                        li #[a(href="#") #[i(data-feather="linkedin")]]
+                                ul.series__share.share-links.share-links--lg
+                                    li #[a(href="#") #[i(data-feather="link")]]
+                                    li #[a(href="#") #[i(data-feather="twitter")]]
+                                    li #[a(href="#") #[i(data-feather="facebook")]]
+                                    li #[a(href="#") #[i(data-feather="linkedin")]]
 
                         div.section-padding--sm
                             .article-wrapper.article-wrapper--vertical
@@ -57,17 +54,23 @@ html(lang="en")
                                                 h3.article__heading #[a(href="") Join the Awwwards Jury 2023]
                                             div.article__info
                                                 div.article__class
-                                                    strong by
-                                                    ul.authors-credit
-                                                        li
-                                                            figure.authors-credit__avatar.authors-credit__avatar--circle
-                                                                img(src="./assets/img/1.png", alt="", srcset="")
-                                                        li
-                                                            ul.authors-credit__names
-                                                                li #[a.link(href="#") Bitzs Alex]
-                                                    strong in
-                                                    ul(class="article__category")
-                                                        li #[a(href="#") Programming]
+                                                    .flex.items-center.gap-6
+                                                        strong.uppercase by
+                                                        ul.authors-credit
+                                                            li
+                                                                figure.authors-credit__avatar.authors-credit__avatar--circle
+                                                                    img(src="./assets/img/1.png", alt="", srcset="")
+                                                                figure.authors-credit__avatar.authors-credit__avatar--circle
+                                                                    img(src="./assets/img/2.png", alt="", srcset="")
+                                                            li
+                                                                ul.authors-credit__names
+                                                                    li #[a.link(href="#") Bitzs Alex]
+                                                                    li #[a.link(href="#") Bitzs Alex]
+                                                    .flex.items-center.gap-6
+                                                        strong.uppercase in
+                                                        ul(class="article__category")
+                                                            li #[a(href="#") Programming]
+                                                                li #[a(href="#") Data Science]
                                                         
                                                 div.article__excerpt
                                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officiis expedita soluta sed quam sunt voluptatum explicabo obcaecati ut quisquam?
