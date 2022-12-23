@@ -7,6 +7,51 @@ html(lang="en")
         title This is a test website
         link(rel="stylesheet", href="./assets/css/app.css")
     body 
+        header#page-header.header
+            .inner
+                .flex.items-stretch.justify-between
+                    .header__logo
+                        a.flex.items-center.gap-2(href="index.html")
+                            img(src="./assets/img/logo.png", alt="The main logo of the site")
+                            span.header__logo__text
+                                | Bitzs
+                                span Space
+                    .header__nav.flex-auto
+                        nav.nav.nav--horizontal
+                            ul.nav__menus
+                                li #[a.nav__link(href="") About]
+                                li #[a.nav__link(href="") Blogs]
+                                li #[a.nav__link(href="") Contact]
+                                li #[a.nav__link(href="") Projects]
+                                li #[a.nav__link(href="") Resume]
+                    .flex.items-stretch.justify-end
+                        ul.header__icons
+                            li.header__social
+                                ul.share-links
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="twitter") 
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="github") 
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="instagram") 
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="facebook") 
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="linkedin")
+                            li #[button(type="button") #[i(data-feather="search")]]
+                            li
+                                button.theme__toggler(type="button")
+                                    span.theme__icons
+                                        i.theme__sun(data-feather="sun")
+                                        i.theme__moon(data-feather="moon")
+                                    span.theme__name
+                                        span.theme__light Light
+                                        span.theme__dark Dark
         main
             section.section-padding.bg-gore-50.bg-opacity-40
                 .inner
@@ -88,7 +133,7 @@ html(lang="en")
                     form.footer__form(action="", method="post")
                         .flex.items-center.gap-10
                             input.input.flex-1(type="email" name="email" placeholder="Your Email")
-                            button.btn.btn--pea(type="submit") Subscribe
+                            button.btn.btn--razzmatazz(type="submit") Subscribe
                 div.text-overline
                     p.text-center
                         | &copy; 2022 All Rights Reserved!

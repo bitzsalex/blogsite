@@ -44,6 +44,11 @@ const themeCheck = () => {
 
 // theme switch
 const themeSwitch = theme => {
+    if (themeToggler) {
+        themeToggler.classList.remove("theme--light", "theme--dark")
+        themeToggler.classList.add("theme--" + theme)
+    }
+
     if (theme == "dark") {
         document.documentElement.classList.add("dark")
         localStorage.setItem("theme", "dark")

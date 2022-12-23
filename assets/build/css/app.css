@@ -82,7 +82,7 @@
     @apply mt-[1.875rem] md:mt-12 {}
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold leading-[1.25] md:leading-[1.33] mt-[3.75rem] md:mt-24 mb-[1.875rem] md:mb-12 {}    @apply text-martinique-800 {}
+    @apply font-heading font-bold leading-[1.25] md:leading-[1.33] mt-[3.75rem] md:mt-24 mb-[1.875rem] md:mb-12 {}    @apply text-martinique-500 {}
   }
   h1 {
     @apply text-h1 {}
@@ -111,6 +111,110 @@
 }
 
 @layer components {
+  .header {
+    @apply sticky top-0 py-10 z-50 bg-white z-[1000] left-0 right-0 {}
+  }
+  .header__logo {
+    @apply flex items-center text-h6 {}
+  }
+  .header__logo img {
+    max-height: 7rem;
+  }
+  .header__logo__text {
+    @apply ml-3 tracking-tight sm:block font-heading font-light {}
+  }
+  .header__logo__text > span {
+    @apply text-martinique-500 uppercase font-bold font-sans {}
+  }
+  .header__icons {
+    @apply flex items-stretch justify-end {}
+  }
+  .header__icons > li {
+    @apply flex items-center {}
+  }
+  .header__icons > li.header__social {
+    @apply hidden sm:flex {}
+  }
+  .header__icons > li:not(:last-child)::after {
+    content: "";
+    @apply block mx-4 h-4/6 w-px bg-gray-200 {}
+  }
+  .header__icons > li a {
+    @apply p-2 {}
+  }
+  .header__nav {
+    @apply hidden lg:flex items-center justify-center {}
+  }
+  .theme__toggler {
+    @apply flex items-center text-caption p-2 gap-2 {}
+  }
+  .theme__icons {
+    @apply h-14 w-10 overflow-hidden relative {}
+  }
+  .theme__name {
+    @apply h-14 w-20 overflow-hidden relative {}
+  }
+  .theme__sun, .theme__moon, .theme__light, .theme__dark {
+    @apply absolute left-0 -translate-y-1/2 opacity-0 transition-all duration-500 {}
+  }
+  .theme__sun, .theme__dark {
+    @apply top-[150%] {}
+  }
+  .theme__moon, .theme__light {
+    @apply -top-1/2 {}
+  }
+  .theme--light .theme__sun, .theme--light .theme__light {
+    @apply top-1/2 opacity-100 {}
+  }
+  .theme--dark .theme__moon, .theme--dark .theme__dark {
+    @apply top-1/2 opacity-100 {}
+  }
+  .nav {
+    @apply flex items-center text-caption {}
+  }
+  .nav__wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2rem);
+    @apply top-0 bottom-0 w-10/12 sm:max-w-sm fixed h-full flex flex-col items-center justify-center shadow-lg z-[99999] gap-10 lg:hidden -right-full opacity-0 default_transition {}
+  }
+  .nav__wrapper.show {
+    @apply opacity-100 right-0 {}
+  }
+  .nav--horizontal {
+    @apply uppercase flex-row {}
+  }
+  .nav--horizontal .nav__menus {
+    @apply flex items-center {}
+  }
+  .nav--horizontal .nav__menus > li {
+    @apply mx-2 {}
+  }
+  .nav--horizontal .nav__link {
+    @apply py-3 px-2 {}
+  }
+  .nav--vertical {
+    @apply flex-col text-subtitle  text-gray-500 dark:text-slate-400 font-semibold {}
+  }
+  .nav--vertical .nav__menus {
+    @apply flex flex-col items-center justify-center gap-2 {}
+  }
+  .nav--vertical .nav__menus > li > a {
+    @apply block py-2 px-4 {}
+  }
+  .nav__menus {
+    @apply tracking-wider {}
+  }
+  .nav__link {
+    @apply hover:text-razzmatazz-500 dark:text-slate-400 {}
+  }
+  .nav__link::after {
+    content: '';
+    @apply absolute bottom-0 opacity-0 w-0 h-px left-1/2 bg-current -translate-x-1/2 {}    background: currentColor;
+    transition: opacity 0.2s ease-in-out, width 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  }
+  .nav__link:hover::after {
+    @apply opacity-100 w-full {}
+  }
   .btn {
     @apply inline-flex text-button items-center py-8 px-16 align-middle transition-all duration-500 shadow-sm hover:shadow-none {}
   }
@@ -120,17 +224,17 @@
   .btn--disabled {
     @apply opacity-60 bg-gray-300 text-gray-800 dark:bg-gray-300 dark:text-gray-400 dark:bg-opacity-20 pointer-events-none {}
   }
-  .btn--pea {
-    @apply bg-pea-500 text-white hover:bg-martinique-900 border-pea-500 {}
+  .btn--razzmatazz {
+    @apply bg-razzmatazz-500 text-white hover:bg-martinique-900 border-razzmatazz-500 {}
   }
-  .btn--pea.btn--text {
-    @apply text-pea-600 hover:bg-pea-100 hover:text-pea-600 dark:text-pea-700 dark:hover:bg-pea-900 {}
+  .btn--razzmatazz.btn--text {
+    @apply text-razzmatazz-600 hover:bg-razzmatazz-100 hover:text-razzmatazz-600 dark:text-razzmatazz-700 dark:hover:bg-razzmatazz-900 {}
   }
-  .btn--pea.btn--tonal {
-    @apply bg-pea-100 text-pea-800 hover:bg-pea-200 hover:text-pea-900 dark:bg-pea-900 dark:text-pea-400 {}
+  .btn--razzmatazz.btn--tonal {
+    @apply bg-razzmatazz-100 text-razzmatazz-800 hover:bg-razzmatazz-200 hover:text-razzmatazz-900 dark:bg-razzmatazz-900 dark:text-razzmatazz-400 {}
   }
-  .btn--pea.btn--outlined {
-    @apply text-pea-800 hover:text-pea-400 hover:bg-transparent {}
+  .btn--razzmatazz.btn--outlined {
+    @apply text-razzmatazz-800 hover:text-razzmatazz-400 hover:bg-transparent {}
   }
   .btn__icon {
     @apply mr-8 {}
@@ -191,7 +295,7 @@
     @apply flex flex-wrap gap-3 {}
   }
   .tags a {
-    @apply text-overline py-2 px-5 btn--outlined btn--rounded w-full font-light border-gray-200 hover:text-pea-400 hover:border-pea-400 {}
+    @apply text-overline py-2 px-5 btn--outlined btn--rounded w-full font-light border-gray-200 hover:text-razzmatazz-400 hover:border-razzmatazz-400 {}
   }
   .article {
     @apply flex flex-col gap-14 {}
@@ -316,7 +420,7 @@
     @apply text-caption font-light {}
   }
   .article__series span {
-    @apply inline-flex items-center gap-2 text-pea-500 {}
+    @apply inline-flex items-center gap-2 text-razzmatazz-500 {}
   }
   .article__series a {
     @apply before:hidden leading-[1.1] font-medium border-gray-300 normal-case {}
@@ -340,7 +444,7 @@
     @apply flex items-center gap-4 {}
   }
   .share-links a {
-    @apply p-2 flex justify-center items-center text-gray-400 hover:text-gray-500 {}
+    @apply p-2 flex justify-center items-center text-current hover:text-razzmatazz-500 {}
   }
   .share-links--lg a {
     @apply w-20 h-20 rounded-lg border-[1px] border-current {}
@@ -398,17 +502,17 @@
     @apply before:hidden leading-[1.1] font-medium border-gray-300 {}
   }
   .link {
-    @apply border-b-[2px] border-pea-600 hover:after:scale-x-100 {}
+    @apply border-b-[2px] border-razzmatazz-600 hover:after:scale-x-100 {}
   }
   .link::before, .link::after {
     content: '';
     @apply absolute w-full h-[2px] bottom-0 left-0 {}
   }
   .link::before {
-    @apply bg-pea-600 h-10 z-[-2px] bg-opacity-10 {}
+    @apply bg-razzmatazz-600 h-10 z-[-2] bg-opacity-10 {}
   }
   .link::after {
-    @apply bottom-[-2px] scale-x-0 origin-top-left bg-pea-900 transition-transform duration-500 {}
+    @apply bottom-[-2px] scale-x-0 origin-top-left bg-razzmatazz-900 transition-transform duration-500 {}
   }
   .post-nav {
     @apply grid grid-cols-2 {}
@@ -459,7 +563,7 @@
   }
   .footer__social-links::before {
     content: '';
-    @apply absolute border-t-[1px] border-pea-200 inline-block top-0 -translate-y-1/2 -translate-x-1/2 left-1/2 w-96 {}
+    @apply absolute border-t-[1px] border-gray-200 inline-block top-0 -translate-y-1/2 -translate-x-1/2 left-1/2 w-96 {}
   }
 }
 

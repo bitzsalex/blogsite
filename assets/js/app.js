@@ -4275,6 +4275,10 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
       themeSwitch("light");
   };
   var themeSwitch = (theme) => {
+    if (themeToggler) {
+      themeToggler.classList.remove("theme--light", "theme--dark");
+      themeToggler.classList.add("theme--" + theme);
+    }
     if (theme == "dark") {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");

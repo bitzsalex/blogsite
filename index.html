@@ -8,6 +8,43 @@
     <link rel="stylesheet" href="./assets/css/app.css">
   </head>
   <body> 
+    <header class="header" id="page-header">
+      <div class="inner">
+        <div class="flex items-stretch justify-between">
+          <div class="header__logo"><a class="flex items-center gap-2" href="index.html"><img src="./assets/img/logo.png" alt="The main logo of the site"><span class="header__logo__text">Bitzs<span>Space</span></span></a></div>
+          <div class="header__nav flex-auto">
+            <nav class="nav nav--horizontal">
+              <ul class="nav__menus">
+                <li><a class="nav__link" href="">About</a></li>
+                <li><a class="nav__link" href="">Blogs</a></li>
+                <li><a class="nav__link" href="">Contact</a></li>
+                <li><a class="nav__link" href="">Projects</a></li>
+                <li><a class="nav__link" href="">Resume</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="flex items-stretch justify-end">
+            <ul class="header__icons">
+              <li class="header__social">
+                <ul class="share-links">
+                  <li><a href="" target="_blank"><i data-feather="twitter"> </i></a></li>
+                  <li><a href="" target="_blank"><i data-feather="github"> </i></a></li>
+                  <li><a href="" target="_blank"><i data-feather="instagram"> </i></a></li>
+                  <li><a href="" target="_blank"><i data-feather="facebook"> </i></a></li>
+                  <li><a href="" target="_blank"><i data-feather="linkedin"></i></a></li>
+                </ul>
+              </li>
+              <li>
+                <button type="button"><i data-feather="search"></i></button>
+              </li>
+              <li>
+                <button class="theme__toggler" type="button"><span class="theme__icons"><i class="theme__sun" data-feather="sun"></i><i class="theme__moon" data-feather="moon"></i></span><span class="theme__name"><span class="theme__light">Light</span><span class="theme__dark">Dark</span></span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="section-padding bg-gore-50 bg-opacity-40">
         <div class="inner">
@@ -465,7 +502,7 @@
           <form class="footer__form" action="" method="post">
             <div class="flex items-center gap-10">
               <input class="input flex-1" type="email" name="email" placeholder="Your Email">
-              <button class="btn btn--pea" type="submit">Subscribe</button>
+              <button class="btn btn--razzmatazz" type="submit">Subscribe</button>
             </div>
           </form>
         </div>
