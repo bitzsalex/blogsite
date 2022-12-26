@@ -574,6 +574,9 @@ blockquote {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .header__logo {
   display: flex;
@@ -621,8 +624,8 @@ blockquote {
 }
 .header__icons > li:not(:last-child)::after {
     content: "";
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     display: block;
     height: 66.666667%;
     width: 1px;
@@ -1268,7 +1271,6 @@ blockquote {
   gap: 3rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 8rem;
 }
 .series__info {
   display: flex;
@@ -1290,8 +1292,8 @@ blockquote {
   align-items: center;
   gap: 1.5rem;
   border-radius: 0.5rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -1458,8 +1460,8 @@ blockquote {
   justify-content: space-between;
   padding-left: 5rem;
   padding-right: 5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   font-size: clamp(12px, 11.8873239437px + 0.4225352113vw, 14px);
   letter-spacing: 1.5px;
   font-weight: 700;
@@ -1482,10 +1484,12 @@ blockquote {
   display: block;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .page-nav a:hover {
   --tw-text-opacity: 1;
-  color: rgb(184 172 205 / var(--tw-text-opacity));
+  color: rgb(251 107 174 / var(--tw-text-opacity));
 }
 .page-nav__sub {
   margin-left: 1rem;
@@ -1608,14 +1612,14 @@ blockquote {
 .justify-between {
   justify-content: space-between;
 }
+.gap-2 {
+  gap: 0.5rem;
+}
 .gap-20 {
   gap: 5rem;
 }
 .gap-6 {
   gap: 1.5rem;
-}
-.gap-2 {
-  gap: 0.5rem;
 }
 .gap-10 {
   gap: 2.5rem;

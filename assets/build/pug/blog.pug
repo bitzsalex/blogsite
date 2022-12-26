@@ -7,7 +7,52 @@ html(lang="en")
         title This is a test website
         link(rel="stylesheet", href="./assets/css/app.css")
     body 
-        header
+        header#page-header.header
+            .inner
+                .flex.items-stretch.justify-between
+                    .header__logo
+                        a.flex.items-center.gap-2(href="index.html")
+                            img(src="./assets/img/logo.png", alt="The main logo of the site")
+                            span.header__logo__text
+                                | Bitzs
+                                span Space
+                    .header__nav.flex-auto
+                        nav.nav.nav--horizontal
+                            ul.nav__menus
+                                li #[a.nav__link(href="") About]
+                                li #[a.nav__link(href="") Blogs]
+                                li #[a.nav__link(href="") Contact]
+                                li #[a.nav__link(href="") Projects]
+                                li #[a.nav__link(href="") Resume]
+                    .flex.items-stretch.justify-end
+                        ul.header__icons
+                            li.header__social
+                                ul.share-links
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="twitter") 
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="github") 
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="instagram") 
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="facebook") 
+                                    li
+                                        a(href="" target="_blank")
+                                            i(data-feather="linkedin")
+                            li #[button(type="button") #[i(data-feather="search")]]
+                            li
+                                button.theme__toggler(type="button")
+                                    span.theme__icons
+                                        i.theme__sun(data-feather="sun")
+                                        i.theme__moon(data-feather="moon")
+                                    span.theme__name
+                                        span.theme__light Light
+                                        span.theme__dark Dark
+       
         main
             section
                 .inner
@@ -60,7 +105,7 @@ html(lang="en")
                                 h3.text-h4 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
                                 
-                            footer.article__footer.article__footer--lg
+                            section.article__footer.article__footer--lg
                                 .article__tags
                                     h6.text-overline.m-0 tags
                                     ul.tags
@@ -82,7 +127,7 @@ html(lang="en")
                                                 span TailwindCSS: Fluid typography with CSS clamp
                                             i(data-feather="corner-down-right")
 
-                        aside.sticky-aside.sticky-aside--right.section-padding
+                        aside.sticky-aside.sticky-aside--right.section-padding--sm
                             .flex.flex-col.gap-20
                                 div.flex.flex-col.gap-6
                                     h3.text-h6.m-0 On this page
@@ -115,6 +160,38 @@ html(lang="en")
                                             h3.article__heading.article__heading--sm
                                                 span.block.font-light part One
                                                 span.text-gore-700 This is the title of blog post another blog and it extends
+
+        footer#page-footer.section-padding.footer
+            .inner
+                .footer__newsletter
+                    h4.m-0 Subscribe to my newsletter to get latest updates and posts
+                    form.footer__form(action="", method="post")
+                        .flex.items-center.gap-10
+                            input.input.flex-1(type="email" name="email" placeholder="Your Email")
+                            button.btn.btn--razzmatazz(type="submit") Subscribe
+                div.text-overline
+                    p.text-center
+                        | &copy; 2022 All Rights Reserved!
+                        span.block Built with #[a.link(href="https://gohugo.io" target="_blank") Hugo]
+                        span.block Hosted on #[a.link(href="https://www.hostinger.com" target="_blank") Hostinger]
+                div.footer__social-links
+                    .inner--sm
+                        ul.share-links.share-links--footer
+                            li
+                                a(href="" target="_blank")
+                                    i(data-feather="twitter") 
+                            li
+                                a(href="" target="_blank")
+                                    i(data-feather="github") 
+                            li
+                                a(href="" target="_blank")
+                                    i(data-feather="instagram") 
+                            li
+                                a(href="" target="_blank")
+                                    i(data-feather="facebook") 
+                            li
+                                a(href="" target="_blank")
+                                    i(data-feather="linkedin")
 
 
         script(src="./assets/js/app.js")

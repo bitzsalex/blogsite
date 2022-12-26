@@ -112,7 +112,7 @@
 
 @layer components {
   .header {
-    @apply sticky top-0 py-10 z-50 bg-white z-[1000] left-0 right-0 {}
+    @apply sticky top-0 py-10 z-50 bg-white z-[1000] left-0 right-0 shadow-sm {}
   }
   .header__logo {
     @apply flex items-center text-h6 {}
@@ -137,7 +137,7 @@
   }
   .header__icons > li:not(:last-child)::after {
     content: "";
-    @apply block mx-4 h-4/6 w-px bg-gray-200 {}
+    @apply block mx-6 h-4/6 w-px bg-gray-200 {}
   }
   .header__icons > li a {
     @apply p-2 {}
@@ -426,7 +426,7 @@
     @apply before:hidden leading-[1.1] font-medium border-gray-300 normal-case {}
   }
   .series__wrapper {
-    @apply flex flex-col gap-12 relative px-8 pt-32 {}
+    @apply flex flex-col gap-12 relative px-8 {}
   }
   .series__info {
     @apply flex flex-col gap-12 text-caption font-light {}
@@ -435,7 +435,7 @@
     @apply flex flex-col gap-6 mt-8 {}
   }
   .series__contributor {
-    @apply w-full items-center flex gap-6 py-3 px-6 rounded-lg hover:bg-gray-100 {}
+    @apply w-full items-center flex gap-6 py-6 px-6 rounded-lg hover:bg-gray-100 {}
   }
   .series__share {
     @apply border-t border-gray-100 px-10 pt-12 {}
@@ -518,7 +518,7 @@
     @apply grid grid-cols-2 {}
   }
   .post-nav__link {
-    @apply flex justify-between items-center text-overline font-bold px-20 py-8 hover:bg-gray-100 {}
+    @apply flex justify-between items-center text-overline font-bold px-20 py-16 hover:bg-gray-100 {}
   }
   .post-nav__link--prev {
     @apply text-right {}
@@ -527,7 +527,7 @@
     @apply flex flex-col text-[0.733em] tracking-normal {}
   }
   .page-nav a {
-    @apply hover:text-martinique-300 py-1 block {}
+    @apply text-gray-400 hover:text-razzmatazz-400 py-1 block {}
   }
   .page-nav__sub {
     @apply ml-4 {}

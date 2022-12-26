@@ -8,7 +8,43 @@
     <link rel="stylesheet" href="./assets/css/app.css">
   </head>
   <body> 
-    <header></header>
+    <header class="header" id="page-header">
+      <div class="inner">
+        <div class="flex items-stretch justify-between">
+          <div class="header__logo"><a class="flex items-center gap-2" href="index.html"><img src="./assets/img/logo.png" alt="The main logo of the site"><span class="header__logo__text">Bitzs<span>Space</span></span></a></div>
+          <div class="header__nav flex-auto">
+            <nav class="nav nav--horizontal">
+              <ul class="nav__menus">
+                <li><a class="nav__link" href="">About</a></li>
+                <li><a class="nav__link" href="">Blogs</a></li>
+                <li><a class="nav__link" href="">Contact</a></li>
+                <li><a class="nav__link" href="">Projects</a></li>
+                <li><a class="nav__link" href="">Resume</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="flex items-stretch justify-end">
+            <ul class="header__icons">
+              <li class="header__social">
+                <ul class="share-links">
+                  <li><a href="" target="_blank"><i data-feather="twitter"> </i></a></li>
+                  <li><a href="" target="_blank"><i data-feather="github"> </i></a></li>
+                  <li><a href="" target="_blank"><i data-feather="instagram"> </i></a></li>
+                  <li><a href="" target="_blank"><i data-feather="facebook"> </i></a></li>
+                  <li><a href="" target="_blank"><i data-feather="linkedin"></i></a></li>
+                </ul>
+              </li>
+              <li>
+                <button type="button"><i data-feather="search"></i></button>
+              </li>
+              <li>
+                <button class="theme__toggler" type="button"><span class="theme__icons"><i class="theme__sun" data-feather="sun"></i><i class="theme__moon" data-feather="moon"></i></span><span class="theme__name"><span class="theme__light">Light</span><span class="theme__dark">Dark</span></span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section>
         <div class="inner">
@@ -68,7 +104,7 @@
                 <h3 class="text-h4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
               </div>
-              <footer class="article__footer article__footer--lg">
+              <section class="article__footer article__footer--lg">
                 <div class="article__tags">
                   <h6 class="text-overline m-0">tags</h6>
                   <ul class="tags">
@@ -83,9 +119,9 @@
                   <li class="post-nav__item"><a class="post-nav__link post-nav__link--next" href="#"> 
                       <div class="flex flex-col">   <span class="text-gore-700">Next Article</span><span>TailwindCSS: Fluid typography with CSS clamp</span></div><i data-feather="corner-down-right"></i></a></li>
                 </ul>
-              </footer>
+              </section>
             </article>
-            <aside class="sticky-aside sticky-aside--right section-padding">
+            <aside class="sticky-aside sticky-aside--right section-padding--sm">
               <div class="flex flex-col gap-20">
                 <div class="flex flex-col gap-6">
                   <h3 class="text-h6 m-0">On this page</h3>
@@ -121,6 +157,33 @@
         </div>
       </section>
     </main>
+    <footer class="section-padding footer" id="page-footer">
+      <div class="inner">
+        <div class="footer__newsletter">
+          <h4 class="m-0">Subscribe to my newsletter to get latest updates and posts</h4>
+          <form class="footer__form" action="" method="post">
+            <div class="flex items-center gap-10">
+              <input class="input flex-1" type="email" name="email" placeholder="Your Email">
+              <button class="btn btn--razzmatazz" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="text-overline">
+          <p class="text-center">&copy; 2022 All Rights Reserved!<span class="block">Built with <a class="link" href="https://gohugo.io" target="_blank">Hugo</a></span><span class="block">Hosted on <a class="link" href="https://www.hostinger.com" target="_blank">Hostinger</a></span></p>
+        </div>
+        <div class="footer__social-links">
+          <div class="inner--sm">
+            <ul class="share-links share-links--footer">
+              <li><a href="" target="_blank"><i data-feather="twitter"> </i></a></li>
+              <li><a href="" target="_blank"><i data-feather="github"> </i></a></li>
+              <li><a href="" target="_blank"><i data-feather="instagram"> </i></a></li>
+              <li><a href="" target="_blank"><i data-feather="facebook"> </i></a></li>
+              <li><a href="" target="_blank"><i data-feather="linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>

@@ -4288,5 +4288,11 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
     }
   };
   themeCheck();
+  header = document.getElementById("page-header");
+  stickyAside = document.querySelector("aside.sticky-aside");
+  if (header && stickyAside) {
+    console.log(header.clientHeight);
+    stickyAside.style.top = header.clientHeight + "px";
+  }
 })();
 //# sourceMappingURL=app.js.map

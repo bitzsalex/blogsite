@@ -60,3 +60,12 @@ const themeSwitch = theme => {
 
 // running initial check
 themeCheck()
+
+// the observer root element
+header = document.getElementById("page-header")
+stickyAside = document.querySelector("aside.sticky-aside")
+
+if (header && stickyAside) {
+    console.log(header.clientHeight)
+    stickyAside.style.top = header.clientHeight + "px"
+}
